@@ -160,7 +160,8 @@ public class UserInfoServiceImpl implements UserInfoService {
 		try {
 			if (!StringUtils.isBlank(authProperties.getAdUrl())) {
 				props.put(Context.PROVIDER_URL, authProperties.getAdUrl());
-				props.put(Context.SECURITY_PRINCIPAL, authProperties.getLdapBindUser() + "@" + authProperties.getAdDomain());
+				//props.put(Context.SECURITY_PRINCIPAL, authProperties.getLdapBindUser() + "@" + authProperties.getAdDomain());
+				props.put(Context.SECURITY_PRINCIPAL, authProperties.getLdapBindUser());
 			} else {
 				props.put(Context.PROVIDER_URL, authProperties.getLdapServerUrl());
 				props.put(Context.SECURITY_PRINCIPAL, StringUtils.replace(authProperties.getLdapUserDnPattern(), "{0}", authProperties.getLdapBindUser()));
