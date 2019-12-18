@@ -54,23 +54,23 @@ feature.dynamicPipeline=${FEATURE_DYNAMIC_PIPELINE:-disabled}
 # JWT expiration time in milliseconds
 auth.expirationTime=${AUTH_EXPIRATION_TIME:-60000000}
 # Secret Key used to validate the JWT tokens
-# auth.secret=${AUTH_SECRET:-hygieiasecret}
+auth.secret=${AUTH_SECRET:-hygieiasecret}
 auth.authenticationProviders=${AUTH_AUTHENTICATION_PROVIDERS:-STANDARD}
 
 # LDAP Server Url, including port of your LDAP server
-# auth.ldapServerUrl=${AUTH_LDAP_SERVER_URL:-}
+auth.ldapServerUrl=${AUTH_LDAP_SERVER_URL:-}
 
 # If using standard ldap
 # LDAP User Dn Pattern, where the username is replaced with '{0}'
-# auth.ldapUserDnPattern=${AUTH_LDAP_USER_DN_PATTERN:-}
+auth.ldapUserDnPattern=${AUTH_LDAP_USER_DN_PATTERN:-}
 
 # If using ActiveDirectory
 # This will be the domain part of your userPrincipalName
-# auth.adDomain=${AUTH_AD_DOMAIN:-}
+auth.adDomain=${AUTH_AD_DOMAIN:-}
 # This will be your root dn
-# auth.adRootDn=${AUTH_AD_ROOT_DN:-}
+auth.adRootDn=${AUTH_AD_ROOT_DN:-}
 # This is your active directory url
-# auth.adUrl=${AUTH_AD_URL:-}
+auth.adUrl=${AUTH_AD_URL:-}
 
 # LDAP User Search Filter can be used instead of Dn Pattern
 auth.ldapUserSearchFilter=${AUTH_LDAP_USER_SEARCH_FILTER:-}
@@ -79,19 +79,19 @@ auth.ldapManagerDn=${AUTH_LDAP_MANAGER_DN:-}
 auth.ldapManagerPassword=${AUTH_LDAP_MANAGER_PWD:-}
 
 # Needed if you want to query ldap
-# auth.ldapBindUser=${AUTH_LDAP_BIND_USER:-}
-# auth.ldapBindPass=${AUTH_LDAP_BIND_PASS:-}
+auth.ldapBindUser=${AUTH_LDAP_BIND_USER:-}
+auth.ldapBindPass=${AUTH_LDAP_BIND_PASS:-}
 
 # Disable LDAP group Authorization, avoid '[LDAP: error code 32 - No Such Object]' with some LDAP servers
-# auth.ldapDisableGroupAuthorization=${AUTH_LDAP_DISABLE_GROUP_AUTHORIZATION:-false}
+auth.ldapDisableGroupAuthorization=${AUTH_LDAP_DISABLE_GROUP_AUTHORIZATION:-false}
 
 #Monitor Widget proxy credentials
-# monitor.proxy.username=${MONITOR_PROXY_USERNAME:-}
-# monitor.proxy.password=${MONITOR_PROXY_PASSWORD:-}
+monitor.proxy.username=${MONITOR_PROXY_USERNAME:-}
+monitor.proxy.password=${MONITOR_PROXY_PASSWORD:-}
 
 #Monitor Widget proxy information
-# monitor.proxy.type=${MONITOR_PROXY_TYPE:-http}
-# monitor.proxy.host=${MONITOR_PROXY_HOST:-}
-# monitor.proxy.port=${MONITOR_PROXY_PORT:-80}
+monitor.proxy.type=${MONITOR_PROXY_TYPE:-http}
+monitor.proxy.host=${MONITOR_PROXY_HOST:-}
+monitor.proxy.port=${MONITOR_PROXY_PORT:-80}
 
 EOF
