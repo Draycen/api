@@ -181,8 +181,7 @@ public class UserInfoServiceImpl implements UserInfoService {
 			String searchFilter = "";
 			if(!StringUtils.isBlank(authProperties.getAdUrl())) {
 				searchBase = authProperties.getAdRootDn();
-				//searchFilter = "(&(objectClass=user)(userPrincipalName="	+ searchId + "@" + authProperties.getAdDomain() + "))";
-				searchFilter = "(&(objectClass=person)(sAMAccountName=userName))";
+				searchFilter = "(&(objectClass=user)(userPrincipalName="	+ searchId + "@" + authProperties.getAdDomain() + "))";
 			} else {
 				searchBase = authProperties.getLdapUserDnPattern().substring(
 						authProperties.getLdapUserDnPattern().indexOf(',') + 1,

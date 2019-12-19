@@ -8,6 +8,8 @@ EXPOSE 8080
 
 ENV PROP_FILE /hygieia/config/application.properties
 
+COPY  security.keystore /hygieia/
+
 WORKDIR /hygieia
 
 COPY target/*.jar /hygieia/

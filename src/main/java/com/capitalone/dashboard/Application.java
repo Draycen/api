@@ -35,6 +35,9 @@ public class Application extends SpringBootServletInitializer {
     
     public static void main(String[] args) {
         new Application().configure(new SpringApplicationBuilder(Application.class)).run(args);
+        String keystore = "/hygieia/security.keystore";
+        System.setProperty("javax.net.ssl.trustStore", keystore);
+        System.setProperty("javax.net.ssl.trustStorePassword", "123456");
     }
 
     @Bean
